@@ -1,0 +1,100 @@
+{
+  "kind": "collectionType",
+  "collectionName": "partitions",
+  "info": {
+    "name": "partition"
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true
+  },
+  "attributes": {
+    "title": {
+      "type": "string"
+    },
+    "subTitle": {
+      "type": "string"
+    },
+    "description": {
+      "type": "richtext"
+    },
+    "composeur": {
+      "type": "richtext"
+    },
+    "abc": {
+      "type": "richtext"
+    },
+    "images": {
+      "collection": "file",
+      "via": "related",
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos"
+      ],
+      "plugin": "upload",
+      "required": false
+    },
+    "partitionFile": {
+      "collection": "file",
+      "via": "related",
+      "allowedTypes": [
+        "images",
+        "files"
+      ],
+      "plugin": "upload",
+      "required": false
+    },
+    "abcFile": {
+      "collection": "file",
+      "via": "related",
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos"
+      ],
+      "plugin": "upload",
+      "required": false
+    },
+    "midiFile": {
+      "collection": "file",
+      "via": "related",
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos"
+      ],
+      "plugin": "upload",
+      "required": false
+    },
+    "genre": {
+      "model": "genre",
+      "via": "partitions"
+    },
+    "instruments": {
+      "collection": "instrument",
+      "via": "partitions",
+      "dominant": true
+    },
+    "pays": {
+      "model": "pays",
+      "via": "partitions"
+    },
+    "tonalites": {
+      "collection": "tonalite",
+      "via": "partitions",
+      "dominant": true
+    },
+    "playlists": {
+      "collection": "playlist",
+      "via": "partitions"
+    },
+    "text": {
+      "type": "richtext"
+    },
+    "isCopyrighted": {
+      "type": "boolean",
+      "default": false
+    }
+  }
+}

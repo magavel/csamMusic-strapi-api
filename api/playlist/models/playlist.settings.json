@@ -1,0 +1,31 @@
+{
+  "kind": "collectionType",
+  "collectionName": "playlists",
+  "info": {
+    "name": "playlist"
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true
+  },
+  "attributes": {
+    "description": {
+      "type": "richtext"
+    },
+    "dateFin": {
+      "type": "date"
+    },
+    "partitions": {
+      "via": "playlists",
+      "collection": "partition",
+      "dominant": true
+    },
+    "released": {
+      "type": "boolean",
+      "default": true
+    },
+    "Title": {
+      "type": "string"
+    }
+  }
+}

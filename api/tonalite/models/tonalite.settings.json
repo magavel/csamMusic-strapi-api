@@ -1,0 +1,20 @@
+{
+  "kind": "collectionType",
+  "collectionName": "tonalites",
+  "info": {
+    "name": "tonalite"
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true
+  },
+  "attributes": {
+    "name": {
+      "type": "string"
+    },
+    "partitions": {
+      "via": "tonalites",
+      "collection": "partition"
+    }
+  }
+}

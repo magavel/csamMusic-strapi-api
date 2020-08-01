@@ -1,0 +1,23 @@
+{
+  "kind": "collectionType",
+  "collectionName": "pays",
+  "info": {
+    "name": "pays"
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true
+  },
+  "attributes": {
+    "name": {
+      "type": "string"
+    },
+    "flag": {
+      "type": "string"
+    },
+    "partitions": {
+      "via": "pays",
+      "collection": "partition"
+    }
+  }
+}

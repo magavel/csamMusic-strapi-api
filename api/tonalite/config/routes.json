@@ -1,0 +1,52 @@
+{
+  "routes": [
+    {
+      "method": "GET",
+      "path": "/tonalites",
+      "handler": "tonalite.find",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/tonalites/count",
+      "handler": "tonalite.count",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/tonalites/:id",
+      "handler": "tonalite.findOne",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "POST",
+      "path": "/tonalites",
+      "handler": "tonalite.create",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "PUT",
+      "path": "/tonalites/:id",
+      "handler": "tonalite.update",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "DELETE",
+      "path": "/tonalites/:id",
+      "handler": "tonalite.delete",
+      "config": {
+        "policies": []
+      }
+    }
+  ]
+}
